@@ -5,11 +5,8 @@ def change (symb,shift, lists):
     else:
         return symb
 alphabet='абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-text = input ('Введите сообщение: ')
-shift = int(input ('Введите сообщение: '))
+text = input ('Введите сообщение: ').lower()
+shift = int(input ('Введите сдвиг: '))
 print('Зашифрованное слово: ', end='')
 text_change = [change(i,shift,alphabet) for i in text]
-answer = ''
-for i in text_change:
-    answer +=i
-print (answer)
+print (''.join(text_change))
